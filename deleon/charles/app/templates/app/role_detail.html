@@ -1,0 +1,11 @@
+{% extends "app/base.html" %}
+
+{% block title %}Role Detail{% endblock %}
+
+{% block content %}
+<h2>{{ role.name }}</h2>
+<p>{{ role.description }}</p>  <!-- Adjust this according to your Role model -->
+<a href="{% url 'role_update' role.pk %}">Edit</a>
+<a href="{% url 'role_delete' role.pk %}">Delete</a>
+<a href="{% url 'role_list' %}">Back to Role List</a>
+{% endblock %}
